@@ -1,2 +1,2 @@
 #!/bin/bash
-export PYFILE="python main.py" && echo $PYFILE
+python $PYFILE
