@@ -8,8 +8,8 @@ int check_cycle(listint_t *list)
 	int i = 0;
 	listint_t *head = list;
 
-	if (list->next == NULL)
-		return (1);
+	if (!list)
+		return (0);
 	for (; (*list).next; i++) /* is equal to (*list).next != NULL */
 	{
 		if ((*list).next == head)
