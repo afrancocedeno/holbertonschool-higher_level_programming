@@ -7,7 +7,7 @@ if __name__ == "__main__":
 	elif l == 2:  # somthing that saves the number of arguments
 		print("1 argument:\n1: {}".format(argv[1]))
 	else:
-		print("{:d} arguments: ".format(l - 1))
+		print("{:d} arguments:".format(l - 1))
 		arg_number = 1
 		for i in argv:  # from the first argument till the last
 			if i != argv[0]:  # not valid != 0
