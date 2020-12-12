@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	speed_pointer = list;
 	if (!list || (*list).next == NULL) /* == NULL equals from unexistance */
 		return (0);
-	while (list && speed_pointer) /* while they exist */
+	while (list != speed_pointer) /* while they exist */
 	{
 		list = (*list).next;
 		speed_pointer = (*(*speed_pointer).next).next;
