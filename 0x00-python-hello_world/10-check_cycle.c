@@ -8,7 +8,7 @@ int check_cycle(listint_t *list)
 	int i = 0;
 	listint_t *head = list;
 
-	if (list != NULL)
+	if (!list) /* == NULL equals from unexistance */
 		return (0);
 	for (; (*list).next; i++) /* is equal to (*list).next != NULL */
 	{
