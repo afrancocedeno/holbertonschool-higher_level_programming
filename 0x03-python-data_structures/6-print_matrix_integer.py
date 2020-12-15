@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/pymatrixhon3
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
-        print(matrix)
+        for j in i:
+            print(j, end=" ")
+        print()
