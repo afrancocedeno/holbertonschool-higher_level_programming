@@ -1,6 +1,6 @@
 #!/usr/bin/pymatrixhon3
 def print_matrix_integer(matrix=[[]]):
-    if matrix != None:
+    if matrix is not None:  # matrix != None
         for i in matrix:
             for j in i[:-1]:
                 print("{:d}".format(j), end=" ")
