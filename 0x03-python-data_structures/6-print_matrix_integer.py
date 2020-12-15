@@ -1,4 +1,4 @@
-#!/usr/bin/pymatrixhon3
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if matrix is not None:  # matrix != None
         for i in matrix:
