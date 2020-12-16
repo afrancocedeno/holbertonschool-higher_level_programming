@@ -9,7 +9,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, j = 0, buffer[1024];
+	int i = 0, j = 0, buffer[5 * 1024];
 	listint_t *aux_ptr = NULL;
 
 	aux_ptr = *head;
