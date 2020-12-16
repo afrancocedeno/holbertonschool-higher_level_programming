@@ -1,5 +1,6 @@
-#include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
  * is_palindrome - file description.
