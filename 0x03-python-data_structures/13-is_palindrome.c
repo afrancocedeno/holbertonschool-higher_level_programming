@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	listint_t *aux_ptr = NULL;
 
 	aux_ptr = *head;
-	if (!*head || !(*head).next)
+	if (!*head || !(*(*head)).next)
 		return (1);
 	/* buffering */
 	for (; i < 20; i++)
