@@ -1,5 +1,12 @@
 #include "lists.h"
+#include <stdlib.h>
 
+/**
+ * is_palindrome - file description.
+ * @head: input list.
+ *
+ * Return: value 0 or 1.
+ */
 int is_palindrome(listint_t **head)
 {
 	int i = 0, j = 0, buffer[1024];
