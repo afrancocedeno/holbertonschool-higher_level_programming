@@ -2,9 +2,9 @@
 
 
 # how do I receive arguments froms another funciton in python?
-def safe_print_list(my_list=[], items_request=0):
+def safe_print_list(my_list=[], x=0):
     items_give = 0
-    for i in range(items_request):
+    for i in range(x):
         try:
             # end="" doesn´t print a new line
             print("{}".format(my_list[i]), end="")
