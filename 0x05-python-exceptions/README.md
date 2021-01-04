@@ -1,0 +1,1 @@
+expeptions handling with python
