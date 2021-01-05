@@ -2,11 +2,14 @@
 
 
 def safe_print_division(a, b):
-    result = 0
     try:
         result = a // b
         print("Inside result: {:.1f}".format(result))
-    except BaseException as e:
-        return ("none")
+    except:
+        # if exception occurrs, then result equals to None
+        result = None
+        print("Inside result: {}".format(result))
+    else:
+        result = ("{:.1f}".format(result))
     finally:
-        return ("{:.1f}".format(result))
+        return (result)
