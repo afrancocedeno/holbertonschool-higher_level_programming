@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 import random
-n = random.randint(-1000, 10000)
-# print("Last digit of", n, "is\n", n % 10)
-print("Last digit of {:d} is {:d}".format(n, n % 10 if n > 0 else n % -10))
+number = random.randint(-10000, 10000)
+last_digit = abs(number) % 10
+def checker_digit(self):
+    if self > 5:
+        return (' and is greater than 5')
+    if self == 0:
+        return (' and is 0')
+    if self < 6 and not 0:
+        return (' and is less than 6 and not 0')
+print('Last digit of ' + str(number) + ' is ' + str(last_digit) + checker_digit(last_digit))
