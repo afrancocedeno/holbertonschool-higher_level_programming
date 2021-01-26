@@ -14,4 +14,4 @@ def checker_digit(self):
 
 
 dch = checker_digit(last_digit)
-print('Last digit of ' + str(number) + ' is ', str(last_digit) + dch)
+print('Last digit of ' + str(number) + ' is  ', str(last_digit) + dch)
