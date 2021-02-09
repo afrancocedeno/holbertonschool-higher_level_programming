@@ -1,15 +1,24 @@
-#!/usr/bin/python3
-"""class that defines a square"""
+"""Module"""
 
 
 class Square:
-    """exceptions handling"""
+    """Square class with its area"""
     def __init__(self, size=0):
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        elif type(size) is not int:
+        """init function"""
+        if (isinstance(size, int) is not True):
             raise TypeError("size must be an integer")
+        elif (size < 0):
+            raise ValueError("size must be >= 0")
         self.__size = size
-    """function calculating area"""
+
     def area(self):
-        return self.__size ** 2
+        """private attribute __size to prevent error:
+        > output errot without protection attribute
+            Square' object has no attribute 'size'
+        Further solution:
+            return (self.__size * self.__size)
+            return (self.__size ** 2)
+
+        """
+
+        return self.__size * self.__size
