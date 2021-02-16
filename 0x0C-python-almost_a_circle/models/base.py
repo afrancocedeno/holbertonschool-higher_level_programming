@@ -10,11 +10,18 @@ class Base:
     __a = 0 -> is private
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
-        # id is an attribute of an instance not the class: self.id
+        """id is an attribute of an instance not the class: self.id"""
         if id is not None:
-            # assign the public instance attribute id with this argument value
+            """ assign the public attribute id with this argument value """
             self.id = id
         else:
+            """The __nb_objects is an attribute for the class
+
+            __nb_objects +=1 --> is not correct
+
+            """
+
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
