@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""class module documentation example"""
+
+
 class Base:
     """create an attribute for the class Base
 
