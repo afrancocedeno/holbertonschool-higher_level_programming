@@ -1,4 +1,4 @@
 --
-SELECT COUNT(89)
+SELECT COUNT(*)
 FROM first_table
-WHERE hbtn_0c_0
+WHERE id=89
