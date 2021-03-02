@@ -4,5 +4,5 @@
 -- SELECT AVG(column_name)
 -- FROM table_name
 -- WHERE condition;
-SELECT AVG(score)
+SELECT AVG(score) AS average
 FROM second_table
