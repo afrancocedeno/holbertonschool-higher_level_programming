@@ -3,7 +3,7 @@ const myArgs = process.argv.slice(2);
 let i = 0;
 
 // sort in reverse
-myArgs.sort(function(a, b) { return (b - a); });
+myArgs.sort(function (a, b) { return (b - a); });
 
 // Edge cases
 if (process.argv.length <= 3) console.log(0);
