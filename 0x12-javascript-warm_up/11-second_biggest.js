@@ -1,4 +1,4 @@
-#!/usr/bin / node
+#!/usr/bin/node
 const myArgs = process.argv.slice(2);
 let i = 0;
 myArgs.sort().reverse();
