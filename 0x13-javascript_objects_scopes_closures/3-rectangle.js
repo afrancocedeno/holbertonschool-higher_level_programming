@@ -8,9 +8,8 @@ class Rectangle {
   }
 
   print () {
-    const myVar = 'X';
     let i = 0;
-    while (i < this.heigth) { console.log(myVar.repeat(this.width)); i++; }
+    while (i < this.heigth) { console.log('X'.repeat(this.width)); i++; }
   }
 }
 
