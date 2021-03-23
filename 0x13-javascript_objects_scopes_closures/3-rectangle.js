@@ -10,8 +10,8 @@ class Rectangle {
   print () {
     const myVar = 'X';
     let i = 0;
-    // if (isNaN(h or w)) console.log('Missing size');
     while (i < this.heigth) { console.log(myVar.repeat(this.width)); i++; }
   }
 }
+
 module.exports = Rectangle;
