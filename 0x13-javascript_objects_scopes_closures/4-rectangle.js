@@ -2,8 +2,8 @@
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
-		  this.width = w;
-		  this.height = h;
+      this.width = w;
+      this.height = h;
     }
   }
 
@@ -14,8 +14,8 @@ class Rectangle {
 
   // instance method to rotate the rectangle
   rotate () {
-    this.width = this.height;
-    this.height = this.width;
+    // [,] = [,] rotate in one step
+    [this.width, this.height] = [this.height, this.width];
   }
 
   // instance method to duplicate the rectangle
