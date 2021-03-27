@@ -26,11 +26,11 @@ if __name__ == "__main__":
     with connection.cursor() as cursor:
         cursor.execute(query)
         data_rows = cursor.fetchall()
+        print(*data_rows, sep='\n')
 
 # connection needs to be closed
     connection.close()
 
 # print the each value as * for list
-    print(*data_rows, sep='\n')
 
-# [print(data) for data in table]
+    # [print(data) for data in data_rows]
