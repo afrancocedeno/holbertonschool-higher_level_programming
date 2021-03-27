@@ -18,17 +18,17 @@ if __name__ == "__main__":
 
     query = 'SELECT * FROM states ORDER BY id ASC;'
 # traverse the each value as ** for dict
-    with MySQLdb.connect(**credentials) as connection:
-        # connection = MySQLdb.connect(**credentials)
-        # cursor need to habndle the query
-        # with statement to avoid cursor_variable = connection.cursor()
-        # fetchall returns a tuple with all rows
-        with connection.cursor() as cursor:
-            cursor.execute(query)
-            data_rows = cursor.fetchall()
+    # with MySQLdb.connect(**credentials) as connection:
+    connection = MySQLdb.connect(**credentials)
+    # cursor need to habndle the query
+    # with statement to avoid cursor_variable = connection.cursor()
+    # fetchall returns a tuple with all rows
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        data_rows = cursor.fetchall()
 
 # connection needs to be closed
-# connection.close()
+    connection.close()
 
 # print the each value as * for list
     print(*data_rows, sep='\n')
