@@ -26,9 +26,10 @@ if __name__ == "__main__":
     with connection.cursor() as cursor:
         cursor.execute(query)
         data_rows = cursor.fetchall()
-        # print(*data_rows, sep='\n')
 # connection needs to be closed
     connection.close()
 
 # print the each value as * for list
-    [print(data) for data in data_rows]
+    # [print(data) for data in data_rows]
+    # inine printif
+    print(*data_rows, sep='\n') if (data_rows) else 0
