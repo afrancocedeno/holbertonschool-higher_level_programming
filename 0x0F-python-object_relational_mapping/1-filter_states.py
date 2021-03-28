@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     # REGEX: t.ly/0Drx
     # LIKE: t.ly/ELCp
-    query = 'SELECT * FROM states WHERE name LIKE \'N%\' ORDER BY id ASC;'
+    query = 'SELECT * FROM states WHERE name \
+    LIKE \'N%\' ORDER BY states.id ASC;'
 
     connection = MySQLdb.connect(**credentials)
 
