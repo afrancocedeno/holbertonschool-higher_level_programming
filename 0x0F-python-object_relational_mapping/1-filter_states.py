@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # LIKE: t.ly/ELCp
     query = 'SELECT * FROM states\
         WHERE name \
-        LIKE BINARY 'N%'\
+        LIKE BINARY \'N%\'\
         ORDER BY id ASC;'
 
     connection = MySQLdb.connect(**credentials)
