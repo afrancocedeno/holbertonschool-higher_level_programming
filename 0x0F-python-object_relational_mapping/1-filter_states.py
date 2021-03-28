@@ -20,13 +20,14 @@ if __name__ == "__main__":
     # REGEX: t.ly/0Drx
     # LIKE: t.ly/ELCp
     query = 'SELECT * FROM states WHERE name \
-    LIKE \'N%\' ORDER BY states.id ASC;'
+    LIKE \'N%\' ORDER BY id ASC;'
 
     connection = MySQLdb.connect(**credentials)
 
-    with connection.cursor() as cursor:
-        cursor.execute(query)
-        data_rows = cursor.fetchall()
+    cursor = connection.cursor()
+    cursor.execute(query)
+    data_rows = cursor.fetchall()
 
+    cursor.close()
     connection.close()
     print(*data_rows, sep='\n') if (data_rows) else 0
