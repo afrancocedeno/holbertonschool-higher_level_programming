@@ -32,9 +32,7 @@ def main():
         data_rows = cursor.fetchall()
 
     # inline print using join
-    [print(', '.join([str(data[0]) for data in data_rows]))]\
-        if (data_rows) else 0
-
+    [print(', '.join([str(data[0]) for data in data_rows]))]
     connection.close()
 
 
