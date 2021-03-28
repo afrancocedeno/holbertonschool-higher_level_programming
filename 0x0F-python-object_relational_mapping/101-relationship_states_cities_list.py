@@ -33,13 +33,13 @@ def main():
 
     new_data = session.query(City).order_by(City.id).all()
 
-    results = (
-        city.id,
-        city.name,
-        city.state.name
-    )
+    [print('{:d}: {:s} -> {:s}'.format(
+        data.id,
+        data.name,
+        data.state.name
+        )) for data in new_data]
 
-    [print('{:d}: {:s} -> {:s}'.format(*results)) for data in new_data]
+    session.close()
 
 
 if __name__ == "__main__":
