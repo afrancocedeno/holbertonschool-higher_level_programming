@@ -32,7 +32,7 @@ def main():
 
     connection.close()
 
-    print(*data_rows, sep='\n')
+    print(*data_rows, sep='\n') if (data_rows) else 0
 
 
 if __name__ == "__main__":
