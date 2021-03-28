@@ -4,7 +4,8 @@ module: relationship state cities
 
 '''
 import sys
-from model_state import Base, State
+from relationship_state import Base, State
+from relationship_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -28,7 +29,6 @@ def main():
         pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -36,8 +36,8 @@ def main():
     new_state_name = 'California'
     new_city_name = 'San Francisco'
     # Create new state
-    new_state = State(name=(new_state_name))
-    new_city = City(name=(new_city_name), state=(new_state))
+    new_state = State(name=new_state_name)
+    new_city = City(name=new_city_name, state=new_state)
     # add new state to sessioin
     session.add(new_city)
     session.commit()
