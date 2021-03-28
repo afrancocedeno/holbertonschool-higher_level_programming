@@ -17,7 +17,9 @@ if __name__ == "__main__":
         'charset': "utf8"
     }
 
-    query = 'SELECT * FROM states WHERE name REGEXP \'^[N]\' ORDER BY id ASC;'
+    # REGEX: t.ly/0Drx
+    # LIKE: t.ly/ELCp
+    query = 'SELECT * FROM states WHERE name LIKE \'N%\' ORDER BY id ASC;'
 
     connection = MySQLdb.connect(**credentials)
 
