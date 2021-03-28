@@ -21,7 +21,7 @@ def main():
 
     query = '''
             SELECT * FROM states
-            WHERE name = '{}'
+            WHERE name LIKE BINARY '{}'
             ORDER BY id ASC;
             '''.format(sys.argv[4])
 
@@ -31,9 +31,9 @@ def main():
         cursor.execute(query)
         data_rows = cursor.fetchall()
 
-    connection.close()
-
     print(*data_rows, sep='\n') if (data_rows) else 0
+
+    connection.close()
 
 
 if __name__ == "__main__":
