@@ -25,7 +25,7 @@ def main():
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
-        data_row = session.query(State).all()
+        data_row = session.query(State).order_by(State.id).all()
         [print("{}: {}".format(data.id, data.name)) for data in data_row]
 
 
