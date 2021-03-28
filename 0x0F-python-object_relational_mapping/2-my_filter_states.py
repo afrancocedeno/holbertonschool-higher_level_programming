@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-from MySQLdb import Connection
+"""
+    script that takes in an argument and displays all values in the
+    states table of hbtn_0e_0_usa where name matches the argument.
+"""
 
 
 def main():
@@ -21,13 +24,10 @@ def main():
             ORDER BY id ASC
             '''.format(sys.argv[4])
 
-    connection = MySQLdb.connect(**credentials)
-
-    with connection.cursor() as cursor:
-        cursor.execute(query)
-        data_rows = cursor.fetchall()
-
-    connection.close()
+    with MySQLdb.connect(**credentials) as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query)
+            data_rows = cursor.fetchall()
 
     print(*data_rows, sep='\n')
 
