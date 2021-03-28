@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''
+'''module: model state my get
 '''
 import sys
 from model_state import Base, State
@@ -8,7 +8,8 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main():
-    '''
+    '''script that prints the State object with the
+        name passed as argument from the database
     '''
 
     credentials = (
