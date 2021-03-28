@@ -24,10 +24,13 @@ def main():
             ORDER BY id ASC
             '''.format(sys.argv[4])
 
-    with MySQLdb.connect(**credentials) as connection:
-        with connection.cursor() as cursor:
-            cursor.execute(query)
-            data_rows = cursor.fetchall()
+    connection = MySQLdb.connect(**credentials)
+
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        data_rows = cursor.fetchall()
+
+    connection.close()
 
     print(*data_rows, sep='\n')
 
