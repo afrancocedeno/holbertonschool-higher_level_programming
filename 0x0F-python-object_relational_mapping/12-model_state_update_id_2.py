@@ -31,7 +31,7 @@ def main():
     session = Session()
 
     # update name by id
-    ref_id = 3
+    ref_id = 2
     new_state_name = 'New Mexico'
 
     # .one() select directly the mathch
