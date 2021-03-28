@@ -3,7 +3,7 @@
 '''
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
 
 
@@ -25,9 +25,8 @@ def main():
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
-        data_row = session.query(State).order_by(State.id)
-    [print("{}: {}".format(data.id, data.name)) for data in data_row]\
-        if (data_row) else 0
+        data_row = session.query(State).all()
+        [print("{}: {}".format(data.id, data.name)) for data in data_row]
 
 
 if __name__ == "__main__":
