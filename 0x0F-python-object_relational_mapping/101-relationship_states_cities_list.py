@@ -31,15 +31,12 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_data = session.query(City).order_by(City.id).all()
+    states = session.query(State).order_by(State.id).all()
 
-    [print('{:d}: {:s} -> {:s}'.format(
-        data.id,
-        data.name,
-        data.state.name
-        )) for data in new_data]
-
-    session.close()
+    for state in states:
+        print('{:d}: {:s}'.format(state.id, state.name))
+        for city in state.cities:
+            print('\t{:d}: {:s}'.format(city.id, city.name))
 
 
 if __name__ == "__main__":
