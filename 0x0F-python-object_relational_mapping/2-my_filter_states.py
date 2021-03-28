@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""
-    script that takes in an argument and displays all values in the
-    states table of hbtn_0e_0_usa where name matches the argument.
-"""
+"""module my_filter_states"""
 
 
 def main():
+    """
+    script that takes in an argument and displays all values in the
+    states table of hbtn_0e_0_usa where name matches the argument.
+    """
     import MySQLdb
     import sys
 
@@ -21,7 +22,7 @@ def main():
     query = '''
             SELECT * FROM states
             WHERE name = '{}'
-            ORDER BY id ASC
+            ORDER BY id ASC;
             '''.format(sys.argv[4])
 
     connection = MySQLdb.connect(**credentials)
