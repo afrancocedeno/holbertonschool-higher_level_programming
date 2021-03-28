@@ -26,7 +26,8 @@ def main():
 
     with Session(engine) as session:
         data_row = session.query(State).order_by(State.id)
-    [print("{}: {}".format(data.id, data.name)) for data in data_row]
+    [print("{}: {}".format(data.id, data.name)) for data in data_row]\
+        if (data_row) else 0
 
 
 if __name__ == "__main__":
