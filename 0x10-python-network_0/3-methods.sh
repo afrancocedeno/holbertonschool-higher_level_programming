@@ -1,3 +1,3 @@
 #!/bin/bash
-# comment comment
-sed 's/: /\n/g' <<< curl -sIL localhost:5000/route_4 | grep 'Allow'
+# takes in a URL and displays all HTTP methods the server will accept.
+curl -sIL 0.0.0.0:5000/route_4 | grep 'Allow' | sed 's/Allow: //g'
