@@ -11,7 +11,7 @@ def main():
     '''
 
     # check if no arguments
-    if len(sys.argv) == 0:
+    if len(sys.argv) == 1:
         print('No result')
 
     # if arguments
@@ -22,10 +22,7 @@ def main():
 
         try:
             data = response.json()
-            if len(data) == 0:
-                print('No result')
-            else:
-                print('[{}] {}'.format(data['id'], data['name']))
+            print('[{}] {}'.format(data['id'], data['name']))
         except ValueError:
             print('Not a valid JSON')
 
