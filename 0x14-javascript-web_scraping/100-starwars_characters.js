@@ -15,7 +15,7 @@ request.get(url + movieID + '/', (error, _response, body) => {
   for (const element in moviePaths) {
     request.get(moviePaths[element], (error, _response, body) => {
       if (error) { console.log(error); }
-      movieName = JSON.parse(body).name;
+      const movieName = JSON.parse(body).name;
       console.log(movieName);
     });
   }
