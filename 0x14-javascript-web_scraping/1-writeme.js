@@ -11,7 +11,7 @@ const fileContent = process.argv[3];
 
 const encoding = 'utf8';
 
-fs.write(filePath, fileContent, encoding, (err) => {
+fs.writeFile(filePath, fileContent, encoding, (err) => {
   /* if error is not null message is prompted return it */
   if (err) { return console.log(err); }
 });
