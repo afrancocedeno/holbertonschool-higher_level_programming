@@ -13,13 +13,16 @@ request.get(url, (error, _response, body) => {
   const content = JSON.parse(body);
 
   const resultDic = {};
+    let userIDKey;
+    let completedKey
+
 
   for (const element in content) {
     /* retrive the userid key content in each element */
-    let userIDKey = content[element].userId;
+    userIDKey = content[element].userId;
 
     /* retrive the complete key content in each element */
-    let completedKey = content[element].completed;
+    completedKey = content[element].completed;
 
     /* if completed key is not null increment */
     if (completedKey) {
