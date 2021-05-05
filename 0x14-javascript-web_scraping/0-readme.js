@@ -8,9 +8,9 @@ const file = process.argv[2];
 
 const encoding = 'utf8';
 
-fs.readFile(file, encoding, function (err, fileContent) {
-  /* if error message is prompted return it */
-  if (err) { return console.error(err); }
+fs.readFile(file, encoding, (err, fileContent) => {
+  /* if error is not null message is prompted return it */
+  if (err) { return console.log(err); }
 
   /* otherwise print the data */
   console.log(fileContent);
