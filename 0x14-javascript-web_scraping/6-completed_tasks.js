@@ -16,10 +16,10 @@ request.get(url, (error, _response, body) => {
 
   for (const element in content) {
     /* retrive the userid key content in each element */
-    userIDKey = content[element].userId;
+    let userIDKey = content[element].userId;
 
     /* retrive the complete key content in each element */
-    completedKey = content[element].completed;
+    let completedKey = content[element].completed;
 
     /* if completed key is not null increment */
     if (completedKey) {
