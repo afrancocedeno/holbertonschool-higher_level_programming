@@ -13,9 +13,8 @@ request.get(url, (error, _response, body) => {
   const content = JSON.parse(body);
 
   const resultDic = {};
-    let userIDKey;
-    let completedKey
-
+  let userIDKey;
+  let completedKey;
 
   for (const element in content) {
     /* retrive the userid key content in each element */
