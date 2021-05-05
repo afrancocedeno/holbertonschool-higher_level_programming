@@ -12,11 +12,11 @@ request.get(url + movieID + '/', (error, _response, body) => {
   /* retrieve the path for each movie match */
   const moviePaths = JSON.parse(body).characters;
 
-  for (const element in moviePaths) {
+  for (let element in moviePaths) {
     request.get(moviePaths[element], (error, _response, body) => {
       if (error) { console.log(error); }
       movieName = JSON.parse(body).name;
       console.log(movieName);
     });
-  }
+  };
 });
